@@ -5,19 +5,198 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./Assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./Assets/css/style.css" />
+    <style>
+      /* Variables */
+      :root {
+        --primary-blue: #3498db; /* The main background color */
+        --text-color: #ffffff;
+        --button-bg: #ffffff;
+        --button-text: #000000;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      /* --- Navigation Bar Container --- */
+      .navbar {
+        background-color: var(--primary-blue);
+        display: flex;
+        flex-direction: column;
+        color: var(--text-color);
+        padding: 15px 0 10px 0; /* Vertical padding for the whole bar */
+      }
+
+      /* --- Top Section: Logo, Title, and Auth Buttons --- */
+      .navbar-top-content {
+        /* Set max width to control the content spread and center it */
+        max-width: 1200px; /* Increased max-width to allow more spread */
+        width: 90%;
+        margin: 0 auto; /* Centers the content block horizontally */
+        padding-bottom: 15px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      /* Container for Logo and Title, which must spread out the remaining space */
+      .logo-title-container {
+        display: flex;
+        align-items: center;
+        gap: 20px; /* Space between logo and title */
+
+        /* This is the key: it allows the logo/title block to consume most of the space */
+        flex-grow: 1;
+      }
+
+      /* Logo Styling */
+      .logo-container {
+        width: 100px; /* Matching the larger size in the original screenshot */
+        height: 100px;
+        border-radius: 50%;
+        background-color: #c9e0f6;
+        border: 3px solid #f9f9f9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .logo-text {
+        font-size: 10px;
+        color: #38a169;
+        text-align: center;
+        line-height: 1.1;
+      }
+
+      /* Main Application Title */
+      .app-title {
+        font-size: 26px; /* Larger font size for the prominent title */
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin: 0;
+        /* The title is centered within the remaining space of the logo-title-container */
+        text-align: center;
+        padding-right: 50px; /* Small push to the right to visually center it against the buttons */
+      }
+
+      /* Auth Buttons Styling */
+      .auth-buttons {
+        display: flex;
+        gap: 15px;
+        flex-shrink: 0; /* Ensures buttons maintain size */
+      }
+
+      .auth-buttons button {
+        padding: 10px 20px; /* Larger padding to match the button size */
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        font-size: 16px;
+      }
+
+      .register-btn {
+        background-color: var(--button-bg);
+        color: var(--button-text);
+      }
+
+      .signin-btn {
+        background-color: var(--button-bg);
+        color: var(--button-text);
+      }
+
+      /* --- Bottom Section: Navigation Links --- */
+
+      /* Wrapper for centering the link block */
+      .navbar-links-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      /* Container for the actual links, controlling their spread */
+      .navbar-links {
+        /* Use a fixed, wide width to match the spread of the links */
+        width: 600px;
+        display: flex;
+        justify-content: space-between; /* Spreads links evenly across 600px */
+        padding: 5px 0;
+      }
+
+      .nav-link {
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        padding: 5px 0;
+        transition: color 0.3s;
+        text-align: center;
+      }
+
+      .nav-link:hover {
+        color: #a0c4ff;
+      }
+    </style>
   </head>
   <body>
-    <section class="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="para">
-              <p>hello everyone</p>
+    <header class="navbar">
+      <div class="navbar-top-content">
+        <div class="logo-title-container">
+          <div class="logo-container">
+            <div class="logo-container">
+              <span class="logo-text">BudgetBuddy</span>
             </div>
           </div>
+          <h1 class="app-title">PERSONAL BUDGET TRACKER</h1>
+        </div>
+
+        <div class="auth-buttons">
+          <button class="register-btn">Register</button>
+          <button class="signin-btn">Sign in</button>
         </div>
       </div>
+
+      <nav class="navbar-links-wrapper">
+        <div class="navbar-links">
+          <a href="#" class="nav-link">HOME</a>
+          <a href="#" class="nav-link">ABOUT US</a>
+          <a href="#" class="nav-link">MONEY MATRIX</a>
+          <a href="#" class="nav-link">CONTACT US</a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="quote-box">
+          "TAKE CONTROL OF YOUR MONEY OR IT WILL CONTROL YOU"
+        </div>
+
+        <h2 class="hero-title">
+          BudgetBuddy is where your money meets clarity.
+        </h2>
+        <p class="hero-description">
+          Designed for everyday life, BudgetBuddy turns income and expenses into
+          simple insights helping you make smarter decisions without stress.
+          Track spending, set goals, and stay in control with a clean, secure
+          platform built to grow better money habits.
+        </p>
+
+        <button class="cta-btn">Check it out</button>
+      </div>
     </section>
+      </div>
+    </section>
+    <script src="script.js"></script>
+
+    <script src="script.js"></script>
     <script src="./Assets/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

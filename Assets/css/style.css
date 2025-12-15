@@ -1,0 +1,99 @@
+/* --- HERO SECTION STYLING --- */
+
+.hero-section {
+  position: relative;
+  padding: 100px 0 150px 0; /* Plenty of vertical padding for the content */
+  min-height: 600px;
+  /* Use the light grey/white background color from the space below the navbar */
+  background-color: #f0f0f0;
+  overflow: hidden; /* Crucial to contain the absolutely positioned shapes */
+  text-align: center; /* Center the content */
+}
+
+/* --- Background Shapes (based on Figma) --- */
+
+/* Wrapper for the main content to keep it above the shapes */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 700px; /* Constrain text width for readability */
+  margin: 0 auto;
+}
+
+/* Large Blue Circle (Using :before pseudo-element) */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: -150px; /* Position off-screen to the left */
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  /* Darker blue/gray color from the image */
+  background-color: rgba(68, 86, 110, 0.7);
+  z-index: 1;
+}
+
+/* Medium Blue Circle (Using :after pseudo-element) */
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 150px;
+  left: 50px;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  /* Darker blue/gray color from the image */
+  background-color: rgba(100, 120, 140, 0.5);
+  z-index: 2;
+}
+
+/* --- Quote Box Styling --- */
+.quote-box {
+  display: inline-block;
+  background-color: #e0d9c4; /* Beige/Yellow background color */
+  color: #333;
+  padding: 15px 30px;
+  margin-bottom: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Text Styling --- */
+
+.hero-title {
+  font-size: 44px;
+  font-weight: 800; /* Extra bold */
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-description {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+/* --- CTA Button Styling --- */
+.cta-btn {
+  background-color: #34495e; /* Dark navy blue color from the button in the image */
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn:hover {
+  background-color: #2c3e50;
+}
