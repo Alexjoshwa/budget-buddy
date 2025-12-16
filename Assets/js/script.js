@@ -16,3 +16,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
     alert("Navigating to Sign In Page...");
   });
 });
+document.addEventListener("DOMContentLoaded", (event) => {
+  // ... (Existing JS code for Nav Bar and Hero Section buttons) ...
+
+  // Example for a social icon click (minimal JS)
+  const socialLinks = document.querySelectorAll(".social-icon-link");
+  socialLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      // e.preventDefault(); // Uncomment if you want to stop the link from actually navigating
+      console.log(
+        `Navigating to social media: ${link.querySelector("img").alt}`
+      );
+      // In a real application, the 'href' attribute handles the navigation.
+    });
+  });
+});
