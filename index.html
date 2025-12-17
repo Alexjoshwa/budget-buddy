@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget Buddy - Personal Budget Tracker</title>
+    <link rel="stylesheet" href="./Assets/css/test.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="logo">budget buddy</div>
+      <nav>
+        <a href="#about">Personal Budget Tracker</a>
+        <a href="#login" class="login-btn">LOGIN PAGE</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about" class="hero-section">
+        <div class="content-container">
+          <div class="text-content">
+            <h1>About Our Budget Tracker</h1>
+            <p>
+              Focus on what's important to you. Track your monthly spending and
+              more.
+            </p>
+            <button class="cta-button">check out</button>
+            <p class="small-text">See what you can do with Budget Buddy</p>
+          </div>
+          <div class="image-content">
+            <div class="hero-mockup"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="features-section">
+        <div class="features-header">
+          <h2>All the features you need to manage your money</h2>
+        </div>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <div class="icon"></div>
+            <h3>Clear graphs and charts</h3>
+            <p>Analyze your spending and saving habits with ease.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon"></div>
+            <h3>Calendar and forecasting</h3>
+            <p>Plan your budget ahead with smart predictions.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon"></div>
+            <h3>Custom dashboards</h3>
+            <p>View your most important metrics at a glance.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon"></div>
+            <h3>Budgets and reporting</h3>
+            <p>Set goals and receive detailed financial reports.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <h2>LOGIN PAGE</h2>
+        <form>
+          <input type="text" placeholder="Username" />
+          <input type="password" placeholder="Password" />
+          <button type="submit">Log In</button>
+        </form>
+        <button class="close-btn">Close</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 budget buddy. All rights reserved.</p>
+    </footer>
+
+    <script src="./Assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
