@@ -1,11 +1,15 @@
-document.addEventListener("DOMContentLoaded", (event) => {
-  // ... (Existing Nav Bar JS code for Register/Sign In, and Learn More) ...
+window.addEventListener("load", () => {
+  const circles = document.querySelectorAll(
+    ".bg-circle-large, .bg-circle-small"
+  );
+  circles.forEach((circle, index) => {
+    circle.style.opacity = "0";
+    circle.style.transition = "all 1s ease-out";
+    circle.style.transitionDelay = `${index * 0.2}s`;
 
-  const checkOutBtn = document.querySelector(".cta-btn");
-
-  checkOutBtn.addEventListener("click", () => {
-    console.log("Check it out button clicked!");
-    // Placeholder: typically scrolls down to features or redirects to the registration page
-    alert("Starting your journey to better money habits!");
+    setTimeout(() => {
+      circle.style.opacity = "0.9";
+      circle.style.transform = "translateY(0)";
+    }, 100);
   });
 });

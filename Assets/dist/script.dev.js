@@ -1,12 +1,15 @@
 "use strict";
 
-document.addEventListener("DOMContentLoaded", function (event) {
-  // ... (Existing Nav Bar JS code for Register/Sign In, and Learn More) ...
-  var checkOutBtn = document.querySelector(".cta-btn");
-  checkOutBtn.addEventListener("click", function () {
-    console.log("Check it out button clicked!"); // Placeholder: typically scrolls down to features or redirects to the registration page
-
-    alert("Starting your journey to better money habits!");
+window.addEventListener("load", function () {
+  var circles = document.querySelectorAll(".bg-circle-large, .bg-circle-small");
+  circles.forEach(function (circle, index) {
+    circle.style.opacity = "0";
+    circle.style.transition = "all 1s ease-out";
+    circle.style.transitionDelay = "".concat(index * 0.2, "s");
+    setTimeout(function () {
+      circle.style.opacity = "0.9";
+      circle.style.transform = "translateY(0)";
+    }, 100);
   });
 });
 //# sourceMappingURL=script.dev.js.map
